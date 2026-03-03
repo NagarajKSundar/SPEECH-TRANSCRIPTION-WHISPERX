@@ -1,0 +1,28 @@
+# Real-time Speech Transcription with Speaker Diarization POC
+# Requirements for Windows 11 - WhisperX Version
+#
+# NOTE: PyTorch 2.6+ has breaking changes with weights_only=True default.
+# The torch_compat.py module patches torch.load to handle this automatically.
+
+# Core audio processing
+sounddevice>=0.4.6
+soundfile>=0.12.1
+numpy>=2.0.0
+
+# PyTorch - MUST be installed FIRST before other packages
+# Install with: pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+torch>=2.0.0
+torchaudio>=2.0.0
+
+# WhisperX for fast transcription with word-level timestamps
+whisperx>=3.1.1
+
+# Speaker diarization (included with whisperx, but explicit for clarity)
+pyannote.audio>=3.1.0
+
+# Hugging Face for model downloads
+huggingface_hub>=0.20.0
+
+# Utilities
+python-dotenv==1.0.0
+rich==13.7.0
